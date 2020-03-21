@@ -1,0 +1,17 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+div.file_name_text{
+  border: 1px solid black;
+}
+
+ion-col.my-thin-col {
+  flex: 0 0 4px;
+  padding:5px;
+  margin-right:10px;
+}
+
+.offset{
+  padding: 10px;
+}

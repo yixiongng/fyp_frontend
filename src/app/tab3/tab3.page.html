@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align: left">
+          <ion-title class="offset">Cert Verifier</ion-title>
+        </ion-col>
+        <ion-col style="text-align: right">
+          <ion-button>Logout</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-text>
+    <h1 style="text-align: center">Please insert signed certificate file</h1>
+  </ion-text>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="my-thin-col">
+        <div>
+          <input type="file" accept=".json" style="display: none" #file (change)="fileChange($event)"/>
+          <ion-button (click)="file.click()">Browse</ion-button>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class = "file_name_text">
+          <ion-input placeholder="Insert JSON file" value="{{ file_name }}" disabled></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center;top:20px">
+        <ion-button>Verify</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
